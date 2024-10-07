@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "465371499504",
+    "project_id": "alwegdany-afec6",
+    "storage_bucket": "alwegdany-afec6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465371499504:android:f9bed6ca584219535aab35",
+        "android_client_info": {
+          "package_name": "com.stackwise.alwegdany"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBljTj1CWUIykMWk_JwoImVGVdC_Q2aQNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465371499504:android:839a84a89e1ab43f5aab35",
+        "android_client_info": {
+          "package_name": "com.stackwiseagencies.alwegdany"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBljTj1CWUIykMWk_JwoImVGVdC_Q2aQNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
