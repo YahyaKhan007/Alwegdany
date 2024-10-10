@@ -2,13 +2,13 @@ import 'dart:convert';
 
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:signal_lab/core/helper/shared_pref_helper.dart';
-import 'package:signal_lab/core/route/route.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/data/model/general_setting/general_setting_main_model.dart';
-import 'package:signal_lab/data/model/global/response_model/response_model.dart';
-import 'package:signal_lab/data/repo/auth/general_setting_repo.dart';
-import 'package:signal_lab/views/components/snackbar/show_custom_snackbar.dart';
+import 'package:alwegdany/core/helper/shared_pref_helper.dart';
+import 'package:alwegdany/core/route/route.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/data/model/general_setting/general_setting_main_model.dart';
+import 'package:alwegdany/data/model/global/response_model/response_model.dart';
+import 'package:alwegdany/data/repo/auth/general_setting_repo.dart';
+import 'package:alwegdany/views/components/snackbar/show_custom_snackbar.dart';
 
 class SplashController extends GetxController {
   GeneralSettingRepo repo;

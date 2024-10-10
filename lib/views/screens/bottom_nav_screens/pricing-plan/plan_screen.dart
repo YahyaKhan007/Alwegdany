@@ -2,16 +2,16 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/core/utils/style.dart';
-import 'package:signal_lab/core/utils/util.dart';
-import 'package:signal_lab/data/controller/plan_controller/plan_controller.dart';
-import 'package:signal_lab/data/repo/plan_repo/plan_repo.dart';
-import 'package:signal_lab/data/services/api_service.dart';
-import 'package:signal_lab/views/components/bottom-nav-bar/bottom_nav_bar.dart';
-import 'package:signal_lab/views/components/custom-indicator/custom_indicator.dart';
-import 'package:signal_lab/views/screens/bottom_nav_screens/pricing-plan/widget/plan_bottom_sheet.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/core/utils/style.dart';
+import 'package:alwegdany/core/utils/util.dart';
+import 'package:alwegdany/data/controller/plan_controller/plan_controller.dart';
+import 'package:alwegdany/data/repo/plan_repo/plan_repo.dart';
+import 'package:alwegdany/data/services/api_service.dart';
+import 'package:alwegdany/views/components/bottom-nav-bar/bottom_nav_bar.dart';
+import 'package:alwegdany/views/components/custom-indicator/custom_indicator.dart';
+import 'package:alwegdany/views/screens/bottom_nav_screens/pricing-plan/widget/plan_bottom_sheet.dart';
 
 import '../../../../core/utils/dimensions.dart';
 import 'widget/plan_card.dart';

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:signal_lab/core/route/route.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/views/screens/onboarding/widget/customButton.dart';
-import 'package:signal_lab/views/screens/onboarding/widget/onBoarding.dart';
-import 'package:signal_lab/views/screens/onboarding/widget/onBoardingBottomButton.dart';
+import 'package:alwegdany/core/route/route.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
+import 'package:alwegdany/views/screens/onboarding/widget/customButton.dart';
+import 'package:alwegdany/views/screens/onboarding/widget/onBoarding.dart';
+import 'package:alwegdany/views/screens/onboarding/widget/onBoardingBottomButton.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatefulWidget {

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/dimensions.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/core/utils/style.dart';
-import 'package:signal_lab/data/controller/privacy/privacy_controller.dart';
-import 'package:signal_lab/data/repo/privacy_repo/privacy_repo.dart';
-import 'package:signal_lab/data/services/api_service.dart';
-import 'package:signal_lab/views/components/appbar/custom_appbar.dart';
-import 'package:signal_lab/views/components/buttons/category_button.dart';
-import 'package:signal_lab/views/components/custom_loader.dart';
+import 'package:alwegdany/core/utils/dimensions.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/core/utils/style.dart';
+import 'package:alwegdany/data/controller/privacy/privacy_controller.dart';
+import 'package:alwegdany/data/repo/privacy_repo/privacy_repo.dart';
+import 'package:alwegdany/data/services/api_service.dart';
+import 'package:alwegdany/views/components/appbar/custom_appbar.dart';
+import 'package:alwegdany/views/components/buttons/category_button.dart';
+import 'package:alwegdany/views/components/custom_loader.dart';
 
 class PrivacyScreen extends StatefulWidget {
   const PrivacyScreen({Key? key}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:signal_lab/data/model/banner_model/banner_model.dart';
+import 'package:alwegdany/data/model/banner_model/banner_model.dart';
 
 import '../../../../core/new_api_services/new_api_service.dart';
 

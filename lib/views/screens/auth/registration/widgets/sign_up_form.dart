@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:signal_lab/core/route/route.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/core/utils/style.dart';
-import 'package:signal_lab/data/controller/auth/registration/registration_controller.dart';
-import 'package:signal_lab/views/components/buttons/rounded_button.dart';
-import 'package:signal_lab/views/components/buttons/rounded_loading_button.dart';
-import 'package:signal_lab/views/components/text_field/another_custom_text_field.dart';
-import 'package:signal_lab/views/components/text_field/custom_text_form_field.dart';
-import 'package:signal_lab/views/components/text_field/custom_text_form_field2.dart';
-import 'package:signal_lab/views/screens/auth/registration/widgets/validation_widget.dart';
+import 'package:alwegdany/core/route/route.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/core/utils/style.dart';
+import 'package:alwegdany/data/controller/auth/registration/registration_controller.dart';
+import 'package:alwegdany/views/components/buttons/rounded_button.dart';
+import 'package:alwegdany/views/components/buttons/rounded_loading_button.dart';
+import 'package:alwegdany/views/components/text_field/another_custom_text_field.dart';
+import 'package:alwegdany/views/components/text_field/custom_text_form_field.dart';
+import 'package:alwegdany/views/components/text_field/custom_text_form_field2.dart';
+import 'package:alwegdany/views/screens/auth/registration/widgets/validation_widget.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({Key? key}) : super(key: key);

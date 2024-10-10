@@ -4,12 +4,12 @@ import 'dart:io';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:signal_lab/core/helper/shared_pref_helper.dart';
-import 'package:signal_lab/core/route/route.dart';
-import 'package:signal_lab/core/utils/method.dart';
-import 'package:signal_lab/data/model/authorization/authorization_response_model.dart';
-import 'package:signal_lab/data/model/general_setting/general_settings_response_model.dart';
-import 'package:signal_lab/data/model/global/response_model/response_model.dart';
+import 'package:alwegdany/core/helper/shared_pref_helper.dart';
+import 'package:alwegdany/core/route/route.dart';
+import 'package:alwegdany/core/utils/method.dart';
+import 'package:alwegdany/data/model/authorization/authorization_response_model.dart';
+import 'package:alwegdany/data/model/general_setting/general_settings_response_model.dart';
+import 'package:alwegdany/data/model/global/response_model/response_model.dart';
 
 class ApiClient extends GetxService {
   SharedPreferences sharedPreferences;

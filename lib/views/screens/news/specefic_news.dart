@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:signal_lab/data/model/blogs_model/blogs_model.dart';
+import 'package:alwegdany/data/model/blogs_model/blogs_model.dart';
 
 import 'package:html/parser.dart' as htmlParser;
 

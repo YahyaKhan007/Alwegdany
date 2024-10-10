@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/data/controller/account/change_password_controller.dart';
-import 'package:signal_lab/views/components/buttons/rounded_button.dart';
-import 'package:signal_lab/views/components/buttons/rounded_loading_button.dart';
-import 'package:signal_lab/views/components/text_field/custom_text_form_field.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/data/controller/account/change_password_controller.dart';
+import 'package:alwegdany/views/components/buttons/rounded_button.dart';
+import 'package:alwegdany/views/components/buttons/rounded_loading_button.dart';
+import 'package:alwegdany/views/components/text_field/custom_text_form_field.dart';
 
 class ChangePasswordForm extends StatefulWidget {
   const ChangePasswordForm({Key? key}) : super(key: key);

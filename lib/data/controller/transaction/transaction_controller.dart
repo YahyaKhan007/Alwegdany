@@ -2,38 +2,36 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/data/model/global/response_model/response_model.dart';
-import 'package:signal_lab/data/model/transaction/transaction_response_model.dart';
-import 'package:signal_lab/data/repo/transaction/transaction_repo.dart';
-import 'package:signal_lab/views/components/snackbar/show_custom_snackbar.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/data/model/global/response_model/response_model.dart';
+import 'package:alwegdany/data/model/transaction/transaction_response_model.dart';
+import 'package:alwegdany/data/repo/transaction/transaction_repo.dart';
+import 'package:alwegdany/views/components/snackbar/show_custom_snackbar.dart';
 
-class TransactionController extends GetxController{
-
+class TransactionController extends GetxController {
   TransactionRepo transactionRepo;
   TransactionController({required this.transactionRepo});
 
   bool isLoading = true;
 
-
   List<String> transactionTypeList = ["All", "Plus", "Minus"];
 
   List<Data> transactionList = [];
-  List<Remarks> remarksList = [(Remarks(remark: "All")),];
+  List<Remarks> remarksList = [
+    (Remarks(remark: "All")),
+  ];
 
   String trxSearchText = '';
   String? nextPageUrl;
   int page = 0;
   int index = 0;
 
-
-
   TextEditingController trxController = TextEditingController();
 
   String selectedRemark = "All";
   String selectedTrxType = "All";
 
-  void initialSelectedValue() async{
+  void initialSelectedValue() async {
     page = 0;
     selectedRemark = "All";
     selectedTrxType = "All";
@@ -48,107 +46,110 @@ class TransactionController extends GetxController{
     update();
   }
 
-  void initData() async{
+  void initData() async {
     isLoading = true;
     update();
     await loadTransaction();
-    isLoading=false;
+    isLoading = false;
     update();
   }
 
-  Future<void> loadTransaction() async{
-
+  Future<void> loadTransaction() async {
     page = page + 1;
 
-    if(page == 1){
+    if (page == 1) {
       remarksList.clear();
       remarksList.insert(0, Remarks(remark: "All"));
       transactionList.clear();
     }
 
-    ResponseModel responseModel = await transactionRepo.getTransactionList(
-        page,
+    ResponseModel responseModel = await transactionRepo.getTransactionList(page,
         type: selectedTrxType.toLowerCase(),
         remark: selectedRemark.toLowerCase(),
-        searchText: trxSearchText
-    );
+        searchText: trxSearchText);
 
-    if(responseModel.statusCode == 200){
-      TransactionResponseModel model = TransactionResponseModel.fromJson(jsonDecode(responseModel.responseJson));
+    if (responseModel.statusCode == 200) {
+      TransactionResponseModel model = TransactionResponseModel.fromJson(
+          jsonDecode(responseModel.responseJson));
 
       nextPageUrl = model.data?.transactions?.nextPageUrl;
 
-      if(model.status.toString().toLowerCase() == "success"){
+      if (model.status.toString().toLowerCase() == "success") {
         List<Data>? tempDataList = model.data?.transactions?.data;
-        if(page == 1){
+        if (page == 1) {
           List<Remarks>? tempRemarksList = model.data?.remarks;
           if (tempRemarksList != null && tempRemarksList.isNotEmpty) {
             for (var element in tempRemarksList) {
-              if(element.remark != null && element.remark?.toLowerCase() != 'null' && element.remark!.isNotEmpty){
+              if (element.remark != null &&
+                  element.remark?.toLowerCase() != 'null' &&
+                  element.remark!.isNotEmpty) {
                 remarksList.add(element);
               }
             }
           }
         }
-        if(tempDataList != null && tempDataList.isNotEmpty){
+        if (tempDataList != null && tempDataList.isNotEmpty) {
           transactionList.addAll(tempDataList);
         }
+      } else {
+        MySnackbar.error(
+          errorList: model.message?.error ?? [MyStrings.somethingWentWrong],
+        );
       }
-      else {
-        MySnackbar.error(errorList: model.message?.error ?? [MyStrings.somethingWentWrong],);
-      }
-    }
-    else {
+    } else {
       MySnackbar.error(errorList: [responseModel.message]);
     }
     update();
   }
 
-  void changeSelectedRemark(String remarks){
+  void changeSelectedRemark(String remarks) {
     selectedRemark = remarks;
     update();
   }
 
-  void changeSelectedTrxType(String trxType){
+  void changeSelectedTrxType(String trxType) {
     selectedTrxType = trxType;
     update();
   }
 
   bool filterLoading = false;
 
-  Future<void> filterData()async{
+  Future<void> filterData() async {
     trxSearchText = trxController.text;
-    page=0;
-    filterLoading=true;
+    page = 0;
+    filterLoading = true;
     update();
 
     await loadTransaction();
 
-    filterLoading=false;
+    filterLoading = false;
     update();
   }
 
-  bool hasNext(){
-    return nextPageUrl !=null && nextPageUrl!.isNotEmpty && nextPageUrl != 'null'? true:false;
+  bool hasNext() {
+    return nextPageUrl != null &&
+            nextPageUrl!.isNotEmpty &&
+            nextPageUrl != 'null'
+        ? true
+        : false;
   }
 
   bool isSearch = false;
-  void changeSearchIcon(){
+  void changeSearchIcon() {
     isSearch = !isSearch;
     update();
-    if(!isSearch){
+    if (!isSearch) {
       initialSelectedValue();
     }
   }
 
   int selectedTrxIndex = -1;
-  void changeTrxIndex(int index){
-    if(index == selectedTrxIndex){
+  void changeTrxIndex(int index) {
+    if (index == selectedTrxIndex) {
       selectedTrxIndex = -1;
-    } else{
+    } else {
       selectedTrxIndex = index;
     }
     update();
   }
-
 }

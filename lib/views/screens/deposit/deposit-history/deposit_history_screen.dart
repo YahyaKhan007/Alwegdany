@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/helper/date_converter.dart';
-import 'package:signal_lab/core/helper/my_converter.dart';
-import 'package:signal_lab/core/utils/dimensions.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/core/utils/util.dart';
-import 'package:signal_lab/data/controller/deposit_controller/deposit_controller.dart';
-import 'package:signal_lab/data/repo/deposit_repo/deposit_repo.dart';
-import 'package:signal_lab/data/services/api_service.dart';
-import 'package:signal_lab/views/components/appbar/custom_appbar.dart';
-import 'package:signal_lab/views/components/custom_loader.dart';
-import 'package:signal_lab/views/components/no_data_found_screen.dart';
-import 'package:signal_lab/views/screens/deposit/deposit-history/widget/custom_deposit_card.dart';
-import 'package:signal_lab/views/screens/deposit/deposit-history/widget/deposit_history_top.dart';
+import 'package:alwegdany/core/helper/date_converter.dart';
+import 'package:alwegdany/core/helper/my_converter.dart';
+import 'package:alwegdany/core/utils/dimensions.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/core/utils/util.dart';
+import 'package:alwegdany/data/controller/deposit_controller/deposit_controller.dart';
+import 'package:alwegdany/data/repo/deposit_repo/deposit_repo.dart';
+import 'package:alwegdany/data/services/api_service.dart';
+import 'package:alwegdany/views/components/appbar/custom_appbar.dart';
+import 'package:alwegdany/views/components/custom_loader.dart';
+import 'package:alwegdany/views/components/no_data_found_screen.dart';
+import 'package:alwegdany/views/screens/deposit/deposit-history/widget/custom_deposit_card.dart';
+import 'package:alwegdany/views/screens/deposit/deposit-history/widget/deposit_history_top.dart';
 
 class DepositHistoryScreen extends StatefulWidget {
   const DepositHistoryScreen({Key? key}) : super(key: key);

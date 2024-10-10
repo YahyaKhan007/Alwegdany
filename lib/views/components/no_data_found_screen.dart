@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
 
 import '../screens/bottom_nav_screens/home/widget/no_data_widget.dart';
 
@@ -19,8 +19,12 @@ class NoDataFoundScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        child: SizedBox(height:MediaQuery.of(context).size.height*height,
+        child: SizedBox(
+            height: MediaQuery.of(context).size.height * height,
             child: NoDataWidget(
-              bottomMargin: bottomMargin,topMargin: topMargin,title: title,)));
+              bottomMargin: bottomMargin,
+              topMargin: topMargin,
+              title: title,
+            )));
   }
 }

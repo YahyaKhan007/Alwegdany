@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
 
 class CustomLoader extends StatelessWidget {
   const CustomLoader({Key? key}) : super(key: key);

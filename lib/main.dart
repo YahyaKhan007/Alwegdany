@@ -1,15 +1,15 @@
 import 'dart:io';
 
+import 'package:alwegdany/core/route/route.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/core/route/route.dart';
-import 'package:signal_lab/data/controller/translation_controller/translation_controller.dart';
-import 'package:signal_lab/push_notification_service.dart';
 import 'core/di_service/di_service.dart' as di_service;
+import 'data/controller/translation_controller/translation_controller.dart';
+import 'push_notification_service.dart';
 
 Future<void> _messageHandler(RemoteMessage message) async {
   await Firebase.initializeApp();

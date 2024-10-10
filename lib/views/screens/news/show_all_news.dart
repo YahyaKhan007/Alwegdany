@@ -3,8 +3,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/data/model/blogs_model/blogs_model.dart';
-import 'package:signal_lab/views/screens/news/specefic_news.dart';
+import 'package:alwegdany/data/model/blogs_model/blogs_model.dart';
+import 'package:alwegdany/views/screens/news/specefic_news.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../core/utils/my_color.dart';

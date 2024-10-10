@@ -1,16 +1,16 @@
 import 'dart:convert';
 import 'dart:developer';
 
-import 'package:signal_lab/core/utils/method.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/core/utils/url_container.dart';
-import 'package:signal_lab/data/model/account/profile_response_model.dart';
-import 'package:signal_lab/data/model/authorization/authorization_response_model.dart';
-import 'package:signal_lab/data/model/global/response_model/response_model.dart';
-import 'package:signal_lab/data/model/user/edit_profile/user_post_model.dart';
-import 'package:signal_lab/data/services/api_service.dart';
+import 'package:alwegdany/core/utils/method.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/core/utils/url_container.dart';
+import 'package:alwegdany/data/model/account/profile_response_model.dart';
+import 'package:alwegdany/data/model/authorization/authorization_response_model.dart';
+import 'package:alwegdany/data/model/global/response_model/response_model.dart';
+import 'package:alwegdany/data/model/user/edit_profile/user_post_model.dart';
+import 'package:alwegdany/data/services/api_service.dart';
 import 'package:http/http.dart' as http;
-import 'package:signal_lab/views/components/snackbar/show_custom_snackbar.dart';
+import 'package:alwegdany/views/components/snackbar/show_custom_snackbar.dart';
 
 class UserProfileRepo {
   ApiClient apiClient;

@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/dimensions.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/core/utils/style.dart';
-import 'package:signal_lab/data/controller/deposit_controller/new_deposit_controller.dart';
-import 'package:signal_lab/data/model/deposit/deposit_method/deposit_method_model.dart';
-import 'package:signal_lab/data/repo/deposit_repo/deposit_repo.dart';
-import 'package:signal_lab/data/services/api_service.dart';
-import 'package:signal_lab/views/components/appbar/custom_appbar.dart';
-import 'package:signal_lab/views/components/buttons/rounded_button.dart';
-import 'package:signal_lab/views/components/buttons/rounded_loading_button.dart';
-import 'package:signal_lab/views/components/custom_loader.dart';
-import 'package:signal_lab/views/components/text_field/custom_text_form_field.dart';
-import 'package:signal_lab/views/screens/deposit/deposit-now/widget/info_widget.dart';
+import 'package:alwegdany/core/utils/dimensions.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/core/utils/style.dart';
+import 'package:alwegdany/data/controller/deposit_controller/new_deposit_controller.dart';
+import 'package:alwegdany/data/model/deposit/deposit_method/deposit_method_model.dart';
+import 'package:alwegdany/data/repo/deposit_repo/deposit_repo.dart';
+import 'package:alwegdany/data/services/api_service.dart';
+import 'package:alwegdany/views/components/appbar/custom_appbar.dart';
+import 'package:alwegdany/views/components/buttons/rounded_button.dart';
+import 'package:alwegdany/views/components/buttons/rounded_loading_button.dart';
+import 'package:alwegdany/views/components/custom_loader.dart';
+import 'package:alwegdany/views/components/text_field/custom_text_form_field.dart';
+import 'package:alwegdany/views/screens/deposit/deposit-now/widget/info_widget.dart';
 
 class DepositNowScreen extends StatefulWidget {
   const DepositNowScreen({Key? key}) : super(key: key);

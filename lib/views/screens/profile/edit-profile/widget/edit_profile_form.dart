@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/data/controller/profile/user_profile_controller.dart';
-import 'package:signal_lab/views/components/buttons/rounded_button.dart';
-import 'package:signal_lab/views/components/text_field/custom_text_form_field.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/data/controller/profile/user_profile_controller.dart';
+import 'package:alwegdany/views/components/buttons/rounded_button.dart';
+import 'package:alwegdany/views/components/text_field/custom_text_form_field.dart';
 
 class EditProfileForm extends StatefulWidget {
   const EditProfileForm({Key? key}) : super(key: key);

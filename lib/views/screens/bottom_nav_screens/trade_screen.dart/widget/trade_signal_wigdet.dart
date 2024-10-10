@@ -5,10 +5,10 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/helper/date_converter.dart';
-import 'package:signal_lab/core/utils/my_images.dart';
-import 'package:signal_lab/core/utils/style.dart';
-import 'package:signal_lab/data/controller/bottom_nav/home/home_controller.dart';
+import 'package:alwegdany/core/helper/date_converter.dart';
+import 'package:alwegdany/core/utils/my_images.dart';
+import 'package:alwegdany/core/utils/style.dart';
+import 'package:alwegdany/data/controller/bottom_nav/home/home_controller.dart';
 
 import '../../../../../core/utils/my_color.dart';
 
@@ -73,8 +73,10 @@ class _TradeSignalListState extends State<TradeSignalList> {
                         child: ExpansionTile(
                           backgroundColor: MyColor.primaryColor,
                           collapsedBackgroundColor: MyColor.primaryColor,
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                          collapsedShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8)),
+                          collapsedShape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8)),
                           title: Text(
                             '${controller.signalsList[index].signal?.name}',
                           ),
@@ -97,7 +99,8 @@ class _TradeSignalListState extends State<TradeSignalList> {
                           children: [
                             Container(
                               padding: const EdgeInsets.all(8.0),
-                              decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8)),
                               // width: MediaQuery.sizeOf(context).width * .7,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -114,7 +117,9 @@ class _TradeSignalListState extends State<TradeSignalList> {
                                 ],
                               ),
                             ),
-                            const SizedBox(height: 15,),
+                            const SizedBox(
+                              height: 15,
+                            ),
                           ],
                         )
                         // Card(

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/dimensions.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/data/controller/deposit_controller/deposit_controller.dart';
-import 'package:signal_lab/views/components/search_button.dart';
-import 'package:signal_lab/views/components/search_text_field.dart';
+import 'package:alwegdany/core/utils/dimensions.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/data/controller/deposit_controller/deposit_controller.dart';
+import 'package:alwegdany/views/components/search_button.dart';
+import 'package:alwegdany/views/components/search_text_field.dart';
 
 class DepositHistoryTop extends StatefulWidget {
   const DepositHistoryTop({Key? key}) : super(key: key);

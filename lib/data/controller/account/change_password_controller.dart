@@ -1,16 +1,13 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/views/components/snackbar/show_custom_snackbar.dart';
+import 'package:alwegdany/views/components/snackbar/show_custom_snackbar.dart';
 import '../../../core/utils/my_strings.dart';
 import '../../repo/account/change_password_repo.dart';
 
-
-class ChangePasswordController extends GetxController  {
+class ChangePasswordController extends GetxController {
   ChangePasswordRepo changePasswordRepo;
 
   ChangePasswordController({required this.changePasswordRepo});
-
 
   String? currentPass, password, confirmPass;
 
@@ -24,59 +21,54 @@ class ChangePasswordController extends GetxController  {
   FocusNode passwordFocusNode = FocusNode();
   FocusNode confirmPassFocusNode = FocusNode();
 
-
-
-
-  Future<void>changePassword() async {
+  Future<void> changePassword() async {
     String currentPass = currentPassController.text.toString();
     String password = passController.text.toString();
 
-    bool error = hasError(currentPass:currentPass, password:password);
+    bool error = hasError(currentPass: currentPass, password: password);
 
-    if(error){
+    if (error) {
       return;
     }
 
-      submitLoading = true;
-      update();
-      bool b = await changePasswordRepo.changePassword(currentPass, password);
+    submitLoading = true;
+    update();
+    bool b = await changePasswordRepo.changePassword(currentPass, password);
 
-      if(b){
-        currentPassController.clear();
-        passController.clear();
-        confirmPassController.clear();
-      }
-
-      submitLoading = false ;
-      update();
-
+    if (b) {
+      currentPassController.clear();
+      passController.clear();
+      confirmPassController.clear();
     }
 
-    bool hasError({required String currentPass, required String password}){
-      List<String>error = [];
-      if (currentPass.isEmpty) {
-        error.add(MyStrings.currentPassEmptyMsg);
-      }
-      if (password.isEmpty) {
-        error.add(MyStrings.newPassEmptyMsg);
-      }
-      if (!(confirmPassController.text == passController.text)) {
-        error.add(MyStrings.passNoMatchMsg);
-      }
+    submitLoading = false;
+    update();
+  }
 
-      if(error.isNotEmpty) {
-        MySnackbar.error(errorList: error);
-        return true;
-      }
-
-        return false;
-
+  bool hasError({required String currentPass, required String password}) {
+    List<String> error = [];
+    if (currentPass.isEmpty) {
+      error.add(MyStrings.currentPassEmptyMsg);
     }
+    if (password.isEmpty) {
+      error.add(MyStrings.newPassEmptyMsg);
+    }
+    if (!(confirmPassController.text == passController.text)) {
+      error.add(MyStrings.passNoMatchMsg);
+    }
+
+    if (error.isNotEmpty) {
+      MySnackbar.error(errorList: error);
+      return true;
+    }
+
+    return false;
+  }
 
   void clearData() {
     submitLoading = false;
-    currentPassController.text='';
-    passController.text='';
-    confirmPassController.text='';
+    currentPassController.text = '';
+    passController.text = '';
+    confirmPassController.text = '';
   }
 }

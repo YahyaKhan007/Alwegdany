@@ -4,8 +4,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_carousel_slider/carousel_slider.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/data/model/reports/reports_model.dart';
-import 'package:signal_lab/views/screens/signal/specefic_signals.dart';
+import 'package:alwegdany/data/model/reports/reports_model.dart';
+import 'package:alwegdany/views/screens/signal/specefic_signals.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../core/utils/my_color.dart';

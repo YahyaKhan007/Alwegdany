@@ -4,11 +4,11 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/core/route/route.dart';
-import 'package:signal_lab/core/utils/my_images.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/core/route/route.dart';
+import 'package:alwegdany/core/utils/my_images.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:signal_lab/core/utils/style.dart';
+import 'package:alwegdany/core/utils/style.dart';
 import '../../../core/utils/my_color.dart';
 
 class CustomBottomNavBar extends StatefulWidget {

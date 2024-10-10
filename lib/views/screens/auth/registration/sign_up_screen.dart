@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/route/route.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/core/utils/style.dart';
-import 'package:signal_lab/data/controller/auth/registration/registration_controller.dart';
-import 'package:signal_lab/data/repo/auth/registration/registration_repo.dart';
-import 'package:signal_lab/data/services/api_service.dart';
-import 'package:signal_lab/views/components/custom_loader.dart';
-import 'package:signal_lab/views/components/text/small_text.dart';
-import 'package:signal_lab/views/components/will_pop_widget.dart';
-import 'package:signal_lab/views/screens/auth/registration/widgets/sign_up_form.dart';
+import 'package:alwegdany/core/route/route.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/core/utils/style.dart';
+import 'package:alwegdany/data/controller/auth/registration/registration_controller.dart';
+import 'package:alwegdany/data/repo/auth/registration/registration_repo.dart';
+import 'package:alwegdany/data/services/api_service.dart';
+import 'package:alwegdany/views/components/custom_loader.dart';
+import 'package:alwegdany/views/components/text/small_text.dart';
+import 'package:alwegdany/views/components/will_pop_widget.dart';
+import 'package:alwegdany/views/screens/auth/registration/widgets/sign_up_form.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);

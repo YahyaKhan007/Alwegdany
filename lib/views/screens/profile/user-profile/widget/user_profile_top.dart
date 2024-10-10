@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/my_images.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/core/route/route.dart';
-import 'package:signal_lab/core/utils/dimensions.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/core/utils/style.dart';
-import 'package:signal_lab/data/controller/profile/user_profile_controller.dart';
+import 'package:alwegdany/core/utils/my_images.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/core/route/route.dart';
+import 'package:alwegdany/core/utils/dimensions.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
+import 'package:alwegdany/core/utils/style.dart';
+import 'package:alwegdany/data/controller/profile/user_profile_controller.dart';
 
 class UserProfileTop extends StatefulWidget {
   const UserProfileTop({Key? key}) : super(key: key);

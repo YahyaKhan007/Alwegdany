@@ -4,7 +4,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:signal_lab/data/model/reports/reports_model.dart';
+import 'package:alwegdany/data/model/reports/reports_model.dart';
 
 import '../../../core/utils/my_color.dart';
 

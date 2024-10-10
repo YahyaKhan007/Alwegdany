@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/data/controller/auth/forget_password_controller.dart';
-import 'package:signal_lab/data/repo/auth/login/login_repo.dart';
-import 'package:signal_lab/views/components/appbar/custom_appbar.dart';
-import 'package:signal_lab/views/components/buttons/rounded_button.dart';
-import 'package:signal_lab/views/components/buttons/rounded_loading_button.dart';
-import 'package:signal_lab/views/screens/auth/forget_password/forget_password/widget/heading_text_widget.dart';
+import 'package:alwegdany/data/controller/auth/forget_password_controller.dart';
+import 'package:alwegdany/data/repo/auth/login/login_repo.dart';
+import 'package:alwegdany/views/components/appbar/custom_appbar.dart';
+import 'package:alwegdany/views/components/buttons/rounded_button.dart';
+import 'package:alwegdany/views/components/buttons/rounded_loading_button.dart';
+import 'package:alwegdany/views/screens/auth/forget_password/forget_password/widget/heading_text_widget.dart';
 
 import '../../../../../core/utils/my_color.dart';
 import '../../../../../core/utils/my_strings.dart';

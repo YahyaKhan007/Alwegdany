@@ -2,18 +2,15 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/views/screens/deposit/deposit-now/widget/webview_widget.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
+import 'package:alwegdany/views/screens/deposit/deposit-now/widget/webview_widget.dart';
 
 import '../../../components/appbar/custom_appbar.dart';
 
 class DepositWebView extends StatefulWidget {
-
   final String redirectUrl;
 
-  const DepositWebView({Key? key,
-    required this.redirectUrl}) : super(key: key);
-
+  const DepositWebView({Key? key, required this.redirectUrl}) : super(key: key);
 
   @override
   State<DepositWebView> createState() => _DepositWebViewState();
@@ -24,7 +21,6 @@ class _DepositWebViewState extends State<DepositWebView> {
   void initState() {
     super.initState();
     permissionServices();
-
   }
 
   @override
@@ -36,12 +32,15 @@ class _DepositWebViewState extends State<DepositWebView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColor.backgroundColor,
-      appBar: const CustomAppBar(title: '',isShowBackBtn: true,bgColor: MyColor.primaryColor,),
+      appBar: const CustomAppBar(
+        title: '',
+        isShowBackBtn: true,
+        bgColor: MyColor.primaryColor,
+      ),
       body: MyWebViewWidget(url: widget.redirectUrl),
       floatingActionButton: favoriteButton(),
     );
   }
-
 
   Widget favoriteButton() {
     return FloatingActionButton(
@@ -49,13 +48,15 @@ class _DepositWebViewState extends State<DepositWebView> {
       onPressed: () async {
         Get.back();
       },
-      child: const Icon(Icons.cancel,color: MyColor.colorWhite,size: 30,),
+      child: const Icon(
+        Icons.cancel,
+        color: MyColor.colorWhite,
+        size: 30,
+      ),
     );
   }
 
-
-  Future<Map<Permission, PermissionStatus>> permissionServices() async{
-
+  Future<Map<Permission, PermissionStatus>> permissionServices() async {
     Map<Permission, PermissionStatus> statuses = await [
       Permission.photos,
       Permission.microphone,
@@ -66,5 +67,4 @@ class _DepositWebViewState extends State<DepositWebView> {
 
     return statuses;
   }
-
 }

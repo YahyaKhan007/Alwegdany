@@ -2,19 +2,18 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/core/helper/my_converter.dart';
-import 'package:signal_lab/core/route/route.dart';
-import 'package:signal_lab/data/model/deposit/deposit_insert/deposit_insert_response_model.dart';
-import 'package:signal_lab/data/model/deposit/deposit_method/deposit_method_model.dart';
-import 'package:signal_lab/data/model/global/response_model/response_model.dart';
-import 'package:signal_lab/data/repo/deposit_repo/deposit_repo.dart';
-import 'package:signal_lab/views/components/snackbar/show_custom_snackbar.dart';
-import 'package:signal_lab/data/model/deposit/deposit_history/deposit_history_model.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/core/helper/my_converter.dart';
+import 'package:alwegdany/core/route/route.dart';
+import 'package:alwegdany/data/model/deposit/deposit_insert/deposit_insert_response_model.dart';
+import 'package:alwegdany/data/model/deposit/deposit_method/deposit_method_model.dart';
+import 'package:alwegdany/data/model/global/response_model/response_model.dart';
+import 'package:alwegdany/data/repo/deposit_repo/deposit_repo.dart';
+import 'package:alwegdany/views/components/snackbar/show_custom_snackbar.dart';
+import 'package:alwegdany/data/model/deposit/deposit_history/deposit_history_model.dart';
 
 class DepositController extends GetxController {
-
   DepositRepo depositHistoryRepo;
   DepositController({required this.depositHistoryRepo});
 
@@ -36,7 +35,6 @@ class DepositController extends GetxController {
 
   TextEditingController amountController = TextEditingController();
   TextEditingController searchController = TextEditingController();
-
 
   void initData() async {
     page = 0;
@@ -167,8 +165,8 @@ class DepositController extends GetxController {
   }
 
   bool isSearch = false;
-  void changeSearchStatus(){
-    isSearch = ! isSearch;
+  void changeSearchStatus() {
+    isSearch = !isSearch;
     update();
   }
 
@@ -181,33 +179,42 @@ class DepositController extends GetxController {
   }
 
   String getStatus(int index) {
-    String status = depositHistoryList[index].status??'';
-    String methodCode = depositHistoryList[index].methodCode??'1';
-    if(status == '1'){
-      double code = double.tryParse(methodCode)??1;
-      return code>=1000? MyStrings.approved : MyStrings.succeed ;
-    } else{
-      return status == '2'? MyStrings.pending : status == '3'? MyStrings.rejected : MyStrings.initiated;
+    String status = depositHistoryList[index].status ?? '';
+    String methodCode = depositHistoryList[index].methodCode ?? '1';
+    if (status == '1') {
+      double code = double.tryParse(methodCode) ?? 1;
+      return code >= 1000 ? MyStrings.approved : MyStrings.succeed;
+    } else {
+      return status == '2'
+          ? MyStrings.pending
+          : status == '3'
+              ? MyStrings.rejected
+              : MyStrings.initiated;
     }
   }
 
- Color getStatusColor(int index) {
-    String status = depositHistoryList[index].status??'';
-    String methodCode = depositHistoryList[index].methodCode??'1';
-    if(status == '1'){
-      double code = double.tryParse(methodCode)??1;
-      return code >= 1000? MyColor.highPriorityPurpleColor
+  Color getStatusColor(int index) {
+    String status = depositHistoryList[index].status ?? '';
+    String methodCode = depositHistoryList[index].methodCode ?? '1';
+    if (status == '1') {
+      double code = double.tryParse(methodCode) ?? 1;
+      return code >= 1000
+          ? MyColor.highPriorityPurpleColor
           : MyColor.greenSuccessColor;
-    } else{
-      return status == '2' ? MyColor.pendingColor : status == '3'? MyColor.redCancelTextColor : MyColor.colorGrey;
+    } else {
+      return status == '2'
+          ? MyColor.pendingColor
+          : status == '3'
+              ? MyColor.redCancelTextColor
+              : MyColor.colorGrey;
     }
   }
 
   String getAmount(int index) {
-    double mainAmount = double.parse(depositHistoryList[index].amount ?? "0") + double.parse(depositHistoryList[index].charge ?? "0");
-    String formatedValue = MyConverter.twoDecimalPlaceFixedWithoutRounding(mainAmount.toString());
+    double mainAmount = double.parse(depositHistoryList[index].amount ?? "0") +
+        double.parse(depositHistoryList[index].charge ?? "0");
+    String formatedValue =
+        MyConverter.twoDecimalPlaceFixedWithoutRounding(mainAmount.toString());
     return formatedValue;
   }
-
 }
-

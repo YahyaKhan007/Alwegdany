@@ -1,14 +1,15 @@
+import 'package:alwegdany/data/repo/account/change_password_repo.dart';
+import 'package:alwegdany/data/services/api_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/core/utils/my_images.dart';
-import 'package:signal_lab/core/utils/style.dart';
-import 'package:signal_lab/data/controller/account/change_password_controller.dart';
-import 'package:signal_lab/data/repo/account/change_password_repo.dart';
-import 'package:signal_lab/data/services/api_service.dart';
-import 'package:signal_lab/views/screens/account/change-password/widget/change_password_form.dart';
+
+import '../../../../core/utils/my_color.dart';
+import '../../../../core/utils/my_images.dart';
+import '../../../../core/utils/my_strings.dart';
+import '../../../../core/utils/style.dart';
+import '../../../../data/controller/account/change_password_controller.dart';
+import 'widget/change_password_form.dart';
 
 class ChangePasswordScreen extends StatefulWidget {
   const ChangePasswordScreen({Key? key}) : super(key: key);

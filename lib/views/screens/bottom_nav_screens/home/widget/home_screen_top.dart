@@ -3,15 +3,15 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/core/helper/my_converter.dart';
-import 'package:signal_lab/core/route/route.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/core/utils/my_images.dart';
-import 'package:signal_lab/core/utils/style.dart';
-import 'package:signal_lab/data/controller/bottom_nav/home/home_controller.dart';
-import 'package:signal_lab/data/controller/plan_controller/plan_controller.dart';
-import 'package:signal_lab/data/model/plan/plan_model.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/core/helper/my_converter.dart';
+import 'package:alwegdany/core/route/route.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
+import 'package:alwegdany/core/utils/my_images.dart';
+import 'package:alwegdany/core/utils/style.dart';
+import 'package:alwegdany/data/controller/bottom_nav/home/home_controller.dart';
+import 'package:alwegdany/data/controller/plan_controller/plan_controller.dart';
+import 'package:alwegdany/data/model/plan/plan_model.dart';
 
 import '../../../../../data/repo/plan_repo/plan_repo.dart';
 

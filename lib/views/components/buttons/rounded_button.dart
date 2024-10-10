@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/style.dart';
+import 'package:alwegdany/core/utils/style.dart';
 import '../../../../core/utils/dimensions.dart';
 
 import '../../../../../core/utils/my_color.dart';

@@ -235,7 +235,7 @@ class MyStrings extends Translations {
       "لوريم إيبسوم هو نص شكلي يستخدم في صناعات الطباعة والتنضيد. كان لوريم إيبسوم هو النص الشكلي القياسي الوهمي للصناعة منذ القرن الخامس عشر";
   static const String more = "المزيد";
 
-  static const String token = 'Signal_Lab';
+  static const String token = 'alwegdany';
   static const String watchingLiveOnPlayLab = 'مشاهدة مباشرة ';
 
   static const String recommended = "موصى به";
@@ -684,7 +684,7 @@ class MyStrings extends Translations {
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Latest sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
           "المزيد": "More",
 
-          'Signal_Lab': "Signal_Lab",
+          'alwegdany': "alwegdany",
           'مشاهدة مباشرة ': "Watch Live ",
 
           "موصى به": "Recommended",
@@ -1137,7 +1137,7 @@ class MyStrings extends Translations {
               "لوريم إيبسوم هو نص شكلي يستخدم في صناعات الطباعة والتنضيد. كان لوريم إيبسوم هو النص الشكلي القياسي الوهمي للصناعة منذ القرن الخامس عشر",
           "المزيد": "المزيد",
 
-          'Signal_Lab': "Signal_Lab",
+          'alwegdany': "alwegdany",
           'مشاهدة مباشرة ': 'مشاهدة مباشرة ',
 
           "موصى به": "موصى به",

@@ -1,14 +1,14 @@
 import 'dart:convert';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:signal_lab/core/utils/method.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/core/helper/shared_pref_helper.dart';
-import 'package:signal_lab/core/utils/url_container.dart';
-import 'package:signal_lab/data/model/auth/verification/email_verification_model.dart';
-import 'package:signal_lab/data/model/global/response_model/response_model.dart';
-import 'package:signal_lab/data/services/api_service.dart';
-import 'package:signal_lab/views/components/snackbar/show_custom_snackbar.dart';
+import 'package:alwegdany/core/utils/method.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/core/helper/shared_pref_helper.dart';
+import 'package:alwegdany/core/utils/url_container.dart';
+import 'package:alwegdany/data/model/auth/verification/email_verification_model.dart';
+import 'package:alwegdany/data/model/global/response_model/response_model.dart';
+import 'package:alwegdany/data/services/api_service.dart';
+import 'package:alwegdany/views/components/snackbar/show_custom_snackbar.dart';
 import 'package:http/http.dart' as http;
 
 class LoginRepo {
@@ -17,8 +17,14 @@ class LoginRepo {
   LoginRepo({required this.apiClient});
 
   Future<ResponseModel> loginUser(
-      {required String username, required String password, required String deviceToken}) async {
-    Map<String, String> map = {"username": username, "password": password, 'deviceToken' : deviceToken};
+      {required String username,
+      required String password,
+      required String deviceToken}) async {
+    Map<String, String> map = {
+      "username": username,
+      "password": password,
+      'deviceToken': deviceToken
+    };
     String url = "${UrlContainer.baseUrl}${UrlContainer.loginEndPoint}";
     ResponseModel responseModel =
         await apiClient.request(url, Method.postMethod, map, passHeader: false);

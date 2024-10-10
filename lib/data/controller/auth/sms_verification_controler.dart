@@ -1,39 +1,34 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/core/route/route.dart';
-import 'package:signal_lab/data/model/authorization/authorization_response_model.dart';
-import 'package:signal_lab/data/model/global/response_model/response_model.dart';
-import 'package:signal_lab/data/repo/auth/sms_email_verification_repo.dart';
-import 'package:signal_lab/views/components/snackbar/show_custom_snackbar.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/core/route/route.dart';
+import 'package:alwegdany/data/model/authorization/authorization_response_model.dart';
+import 'package:alwegdany/data/model/global/response_model/response_model.dart';
+import 'package:alwegdany/data/repo/auth/sms_email_verification_repo.dart';
+import 'package:alwegdany/views/components/snackbar/show_custom_snackbar.dart';
 
 class SmsVerificationController extends GetxController {
-
   SmsEmailVerificationRepo repo;
   SmsVerificationController({required this.repo});
 
   bool hasError = false;
   bool isLoading = true;
-  String currentText='';
-  bool isProfileCompleteEnable=false;
+  String currentText = '';
+  bool isProfileCompleteEnable = false;
   bool isTwoFactorEnable = false;
 
-
-
   Future<void> loadBefore() async {
-    isLoading=true;
+    isLoading = true;
     update();
     await repo.sendAuthorizationRequest();
-    isLoading=false;
+    isLoading = false;
     update();
     return;
   }
 
-
-  bool submitLoading=false;
+  bool submitLoading = false;
   verifyYourSms(String currentText) async {
-
     if (currentText.isEmpty) {
       MySnackbar.error(errorList: [MyStrings.otpEmptyMsg]);
       return;
@@ -43,22 +38,27 @@ class SmsVerificationController extends GetxController {
     update();
 
     ResponseModel responseModel =
-    await repo.verify(currentText, isEmail: false, isTFA: false);
+        await repo.verify(currentText, isEmail: false, isTFA: false);
 
     if (responseModel.statusCode == 200) {
-      AuthorizationResponseModel model = AuthorizationResponseModel.fromJson(jsonDecode(responseModel.responseJson));
+      AuthorizationResponseModel model = AuthorizationResponseModel.fromJson(
+          jsonDecode(responseModel.responseJson));
 
       if (model.status == MyStrings.success) {
-
-        MySnackbar.success(msg:model.message?.success ?? [MyStrings.requestSuccess],);
-        if(isTwoFactorEnable){
-          Get.offAndToNamed(RouteHelper.twoFactorScreen,arguments:isProfileCompleteEnable );
-        } else{
-          Get.offAndToNamed(isProfileCompleteEnable? RouteHelper.profileCompleteScreen : RouteHelper.homeScreen);
+        MySnackbar.success(
+          msg: model.message?.success ?? [MyStrings.requestSuccess],
+        );
+        if (isTwoFactorEnable) {
+          Get.offAndToNamed(RouteHelper.twoFactorScreen,
+              arguments: isProfileCompleteEnable);
+        } else {
+          Get.offAndToNamed(isProfileCompleteEnable
+              ? RouteHelper.profileCompleteScreen
+              : RouteHelper.homeScreen);
         }
-
       } else {
-        MySnackbar.error(errorList: model.message?.error ?? [MyStrings.requestFail]);
+        MySnackbar.error(
+            errorList: model.message?.error ?? [MyStrings.requestFail]);
       }
     } else {
       MySnackbar.error(errorList: [responseModel.message]);
@@ -68,13 +68,12 @@ class SmsVerificationController extends GetxController {
     update();
   }
 
-  bool resendLoading=false;
+  bool resendLoading = false;
   Future<void> sendCodeAgain() async {
-    resendLoading=true;
+    resendLoading = true;
     update();
     await repo.resendVerifyCode(isEmail: false);
-    resendLoading=false;
+    resendLoading = false;
     update();
   }
-
 }

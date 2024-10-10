@@ -1,21 +1,23 @@
-import 'package:signal_lab/data/model/auth/registration_response_model.dart';
+import 'package:alwegdany/data/model/auth/registration_response_model.dart';
 
 class ProfileResponseModel {
   ProfileResponseModel({
-      String? remark, 
-      String? status, 
-      Message? message, 
-      Data? data,}){
+    String? remark,
+    String? status,
+    Message? message,
+    Data? data,
+  }) {
     _remark = remark;
     _status = status;
     _message = message;
     _data = data;
-}
+  }
 
   ProfileResponseModel.fromJson(dynamic json) {
     _remark = json['remark'];
     _status = json['status'].toString();
-    _message = json['message'] != null ? Message.fromJson(json['message']) : null;
+    _message =
+        json['message'] != null ? Message.fromJson(json['message']) : null;
     _data = json['data'] != null ? Data.fromJson(json['data']) : null;
   }
   String? _remark;
@@ -40,14 +42,14 @@ class ProfileResponseModel {
     }
     return map;
   }
-
 }
 
 class Data {
   Data({
-      User? user,}){
+    User? user,
+  }) {
     _user = user;
-}
+  }
 
   Data.fromJson(dynamic json) {
     _user = json['user'] != null ? User.fromJson(json['user']) : null;
@@ -63,34 +65,34 @@ class Data {
     }
     return map;
   }
-
 }
 
 class User {
   User({
-      int? id, 
-      String? firstname, 
-      String? lastname, 
-      String? username, 
-      String? email, 
-      String? countryCode, 
-      String? mobile,
-      String? balance, 
-      String? image, 
-      Address? address, 
-      String? status,
-      dynamic kycData, 
-      String? kv,
-      String? ev,
-      String? sv,
-      int? regStep, 
-      String? verCode, 
-      String? verCodeSendAt, 
-      String? ts,
-      String? tv,
-      String? telegramUsername,
-      String? createdAt, 
-      String? updatedAt,}){
+    int? id,
+    String? firstname,
+    String? lastname,
+    String? username,
+    String? email,
+    String? countryCode,
+    String? mobile,
+    String? balance,
+    String? image,
+    Address? address,
+    String? status,
+    dynamic kycData,
+    String? kv,
+    String? ev,
+    String? sv,
+    int? regStep,
+    String? verCode,
+    String? verCodeSendAt,
+    String? ts,
+    String? tv,
+    String? telegramUsername,
+    String? createdAt,
+    String? updatedAt,
+  }) {
     _id = id;
     _firstname = firstname;
     _lastname = lastname;
@@ -109,7 +111,7 @@ class User {
     _createdAt = createdAt;
     _updatedAt = updatedAt;
     _telegramUsername = telegramUsername;
-}
+  }
 
   User.fromJson(dynamic json) {
     _id = json['id'];
@@ -119,16 +121,17 @@ class User {
     _email = json['email'];
     _countryCode = json['country_code'].toString();
     _mobile = json['mobile'].toString();
-    _balance = json['balance']!=null?json['balance'].toString():'0';
+    _balance = json['balance'] != null ? json['balance'].toString() : '0';
     _image = json['image'];
-    _address = json['address'] != null ? Address.fromJson(json['address']) : null;
+    _address =
+        json['address'] != null ? Address.fromJson(json['address']) : null;
     _status = json['status'].toString();
     _verCode = json['ver_code'].toString();
     _verCodeSendAt = json['ver_code_send_at'].toString();
     _banReason = json['ban_reason'].toString();
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
-    _telegramUsername = json['telegram_username']??'';
+    _telegramUsername = json['telegram_username'] ?? '';
   }
   int? _id;
   String? _firstname;
@@ -192,29 +195,29 @@ class User {
     map['telegram_username'] = _telegramUsername;
     return map;
   }
-
 }
 
 class Address {
   Address({
-      String? country, 
-      String? address, 
-      String? state, 
-      String? zip, 
-      String? city,}){
+    String? country,
+    String? address,
+    String? state,
+    String? zip,
+    String? city,
+  }) {
     _country = country;
     _address = address;
     _state = state;
     _zip = zip;
     _city = city;
-}
+  }
 
   Address.fromJson(dynamic json) {
-    _country = json['country']??'';
+    _country = json['country'] ?? '';
     _address = json['address'];
-    _state = json['state']!=null?json['state'].toString():'';
-    _zip = json['zip']!=null?json['zip'].toString():'';
-    _city = json['city']??'';
+    _state = json['state'] != null ? json['state'].toString() : '';
+    _zip = json['zip'] != null ? json['zip'].toString() : '';
+    _city = json['city'] ?? '';
   }
   String? _country;
   String? _address;
@@ -237,5 +240,4 @@ class Address {
     map['city'] = _city;
     return map;
   }
-
 }

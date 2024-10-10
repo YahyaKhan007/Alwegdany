@@ -2,13 +2,13 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/data/model/global/response_model/response_model.dart';
-import 'package:signal_lab/data/model/referral/referral_model.dart';
-import 'package:signal_lab/data/repo/referral/referral_repo.dart';
-import 'package:signal_lab/views/components/snackbar/show_custom_snackbar.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/data/model/global/response_model/response_model.dart';
+import 'package:alwegdany/data/model/referral/referral_model.dart';
+import 'package:alwegdany/data/repo/referral/referral_repo.dart';
+import 'package:alwegdany/views/components/snackbar/show_custom_snackbar.dart';
 
-class ReferralController extends GetxController{
+class ReferralController extends GetxController {
   ReferralRepo referralRepo;
   ReferralController({required this.referralRepo});
 
@@ -21,18 +21,18 @@ class ReferralController extends GetxController{
 
   TextEditingController searchController = TextEditingController();
 
-  void initData() async{
+  void initData() async {
     await allReferralsData();
-    isLoading=false;
+    isLoading = false;
     update();
   }
 
-  void loadPaginationData()async{
+  void loadPaginationData() async {
     await allReferralsData();
     update();
   }
 
-  void searchReferral()async{
+  void searchReferral() async {
     filterLoading = true;
     update();
     page = 0;
@@ -43,46 +43,47 @@ class ReferralController extends GetxController{
     update();
   }
 
-  Future<void> allReferralsData() async{
-
+  Future<void> allReferralsData() async {
     page = page + 1;
-    if(page == 1){
+    if (page == 1) {
       referralList.clear();
     }
 
-    ResponseModel responseModel = await referralRepo.getReferralData(page, searchText: searchReferrals);
+    ResponseModel responseModel =
+        await referralRepo.getReferralData(page, searchText: searchReferrals);
 
-    if(responseModel.statusCode == 200){
-      ReferralModel referralModel = ReferralModel.fromJson(jsonDecode(responseModel.responseJson));
+    if (responseModel.statusCode == 200) {
+      ReferralModel referralModel =
+          ReferralModel.fromJson(jsonDecode(responseModel.responseJson));
 
       nextPageUrl = referralModel.data?.referrals?.nextPageUrl;
 
-      if(referralModel.status.toString().toLowerCase() == "success"){
+      if (referralModel.status.toString().toLowerCase() == "success") {
         List<ReferralData>? tempList = referralModel.data?.referrals?.data;
-        if(tempList != null && tempList.isNotEmpty){
+        if (tempList != null && tempList.isNotEmpty) {
           referralList.addAll(tempList);
         }
 
-        if(page==1){
+        if (page == 1) {
           isLoading = false;
           update();
         }
+      } else {
+        MySnackbar.error(
+            errorList:
+                referralModel.message?.error ?? [MyStrings.somethingWentWrong]);
+        return;
       }
-      else{
-        MySnackbar.error(errorList: referralModel.message?.error??[MyStrings.somethingWentWrong]);
-        return ;
-      }
-    }
-    else{
+    } else {
       MySnackbar.error(errorList: [responseModel.message]);
-      return ;
+      return;
     }
   }
 
   bool isSearch = false;
-  void changeSearchStatus(){
-    isSearch = ! isSearch;
-    if(!isSearch){
+  void changeSearchStatus() {
+    isSearch = !isSearch;
+    if (!isSearch) {
       searchController.text = '';
       filterData();
     }
@@ -90,17 +91,21 @@ class ReferralController extends GetxController{
   }
 
   bool filterLoading = false;
-  Future<void> filterData()async{
+  Future<void> filterData() async {
     searchReferrals = searchController.text;
     page = 0;
     filterLoading = true;
     update();
     await allReferralsData();
-    filterLoading=false;
+    filterLoading = false;
     update();
   }
 
-  bool hasNext(){
-    return nextPageUrl != null && nextPageUrl!.isNotEmpty && nextPageUrl != 'null' ? true : false;
+  bool hasNext() {
+    return nextPageUrl != null &&
+            nextPageUrl!.isNotEmpty &&
+            nextPageUrl != 'null'
+        ? true
+        : false;
   }
 }

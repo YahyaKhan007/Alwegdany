@@ -2,12 +2,12 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:get/get.dart';
-import 'package:signal_lab/core/helper/date_converter.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/data/model/bottom_nav/home/dashboard_model.dart';
-import 'package:signal_lab/data/model/global/response_model/response_model.dart';
-import 'package:signal_lab/data/repo/bottom_nav/home/dashboard_repo.dart';
-import 'package:signal_lab/views/components/snackbar/show_custom_snackbar.dart';
+import 'package:alwegdany/core/helper/date_converter.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/data/model/bottom_nav/home/dashboard_model.dart';
+import 'package:alwegdany/data/model/global/response_model/response_model.dart';
+import 'package:alwegdany/data/repo/bottom_nav/home/dashboard_repo.dart';
+import 'package:alwegdany/views/components/snackbar/show_custom_snackbar.dart';
 
 class HomeController extends GetxController {
   HomeRepo dashboardRepo;

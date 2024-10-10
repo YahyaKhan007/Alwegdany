@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/dimensions.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/views/components/will_pop_widget.dart';
+import 'package:alwegdany/core/utils/dimensions.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
+import 'package:alwegdany/views/components/will_pop_widget.dart';
 
 import '../../../../data/controller/bottom_nav/home/home_controller.dart';
 import '../../../../data/repo/bottom_nav/home/dashboard_repo.dart';

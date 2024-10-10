@@ -3,11 +3,11 @@ import 'dart:developer';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/data/model/auth/login/login_response_model.dart';
-import 'package:signal_lab/data/model/global/response_model/response_model.dart';
-import 'package:signal_lab/data/repo/auth/login/login_repo.dart';
-import 'package:signal_lab/views/components/snackbar/show_custom_snackbar.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/data/model/auth/login/login_response_model.dart';
+import 'package:alwegdany/data/model/global/response_model/response_model.dart';
+import 'package:alwegdany/data/repo/auth/login/login_repo.dart';
+import 'package:alwegdany/views/components/snackbar/show_custom_snackbar.dart';
 import '../../../../../core/helper/shared_pref_helper.dart';
 import '../../../../../core/route/route.dart';
 

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/utils/dimensions.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/core/utils/my_images.dart';
-import 'package:signal_lab/core/utils/style.dart';
-import 'package:signal_lab/views/components/divider/custom_divider.dart';
+import 'package:alwegdany/core/utils/dimensions.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
+import 'package:alwegdany/core/utils/my_images.dart';
+import 'package:alwegdany/core/utils/style.dart';
+import 'package:alwegdany/views/components/divider/custom_divider.dart';
 
 class SignalListBottomSheet {
   static void showBottomSheet(BuildContext context,

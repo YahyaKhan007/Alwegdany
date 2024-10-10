@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/helper/my_converter.dart';
-import 'package:signal_lab/core/route/route.dart';
-import 'package:signal_lab/core/utils/dimensions.dart';
-import 'package:signal_lab/core/utils/my_images.dart';
-import 'package:signal_lab/core/utils/my_strings.dart';
-import 'package:signal_lab/data/controller/bottom_nav/home/home_controller.dart';
-import 'package:signal_lab/views/screens/bottom_nav_screens/home/widget/renew_plan_bottomSheet.dart';
+import 'package:alwegdany/core/helper/my_converter.dart';
+import 'package:alwegdany/core/route/route.dart';
+import 'package:alwegdany/core/utils/dimensions.dart';
+import 'package:alwegdany/core/utils/my_images.dart';
+import 'package:alwegdany/core/utils/my_strings.dart';
+import 'package:alwegdany/data/controller/bottom_nav/home/home_controller.dart';
+import 'package:alwegdany/views/screens/bottom_nav_screens/home/widget/renew_plan_bottomSheet.dart';
 
 import 'home_single_card.dart';
 

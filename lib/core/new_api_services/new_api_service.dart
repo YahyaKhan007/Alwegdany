@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'package:http/http.dart' as http;
-import 'package:signal_lab/data/model/banner_model/banner_model.dart';
-import 'package:signal_lab/data/model/blogs_model/blogs_model.dart';
-import 'package:signal_lab/data/model/faqs/faqs_model.dart';
+import 'package:alwegdany/data/model/banner_model/banner_model.dart';
+import 'package:alwegdany/data/model/blogs_model/blogs_model.dart';
+import 'package:alwegdany/data/model/faqs/faqs_model.dart';
 
 import '../../data/model/reports/reports_model.dart';
 
@@ -90,7 +90,7 @@ class NewApiClient {
 
       if (response.statusCode == 200) {
         var jsonResponse = jsonDecode(response.body);
-        var banners = jsonResponse['data']['banners']; 
+        var banners = jsonResponse['data']['banners'];
 
         // Iterate through the faqs list
         for (var banner in banners) {

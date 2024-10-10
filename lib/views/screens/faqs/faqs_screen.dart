@@ -3,9 +3,9 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signal_lab/core/new_api_services/new_api_service.dart';
-import 'package:signal_lab/core/utils/my_color.dart';
-import 'package:signal_lab/views/screens/faqs/faqs_controller.dart';
+import 'package:alwegdany/core/new_api_services/new_api_service.dart';
+import 'package:alwegdany/core/utils/my_color.dart';
+import 'package:alwegdany/views/screens/faqs/faqs_controller.dart';
 
 class FAQsScreen extends StatefulWidget {
   const FAQsScreen({super.key});
