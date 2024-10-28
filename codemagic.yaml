@@ -10,7 +10,7 @@ workflows:
         distribution_type: app_store
         bundle_identifier: io.codemagic.flutteryaml
       vars:
-        APP_ID: 1111111111 # <-- Put your APP ID here
+        APP_ID: 6736654634 # <-- Put your APP ID here
       flutter: stable
       xcode: latest # <-- set to specific version e.g. 14.3, 15.0 to avoid unexpected updates.
       cocoapods: default
@@ -46,8 +46,7 @@ workflows:
       # See the following link for details about email publishing - https://docs.codemagic.io/publishing-yaml/distribution/#email
       email:
         recipients:
-          - user_1@example.com
-          - user_2@example.com
+          - yahya.ali.barki@gmail.com
         notify:
           success: true # To receive a notification when a build succeeds
           failure: false # To not receive a notification when a build fails
@@ -71,31 +70,3 @@ workflows:
         # Configuration related to App Store (optional)
         # Note: This action is performed during post-processing.
         submit_to_app_store: false
-
-  web-workflow:
-    name: Web app workflow
-    max_build_duration: 10
-    environment:
-      flutter: stable
-    scripts:
-      - name: Get Flutter packages
-        script: |
-          flutter packages pub get
-      - name: Flutter analyze
-        script: |
-          flutter analyze
-      - name: Flutter unit tests
-        script: |
-          flutter test
-      - name: Flutter build webapp
-        script: |
-          flutter build web --release
-          cd build/web
-          7z a -r ../web.zip ./*
-    artifacts:
-      - build/web.zip
-      - flutter_drive.log
-    publishing:
-      email:
-        recipients:
-          - user_1@example.com
